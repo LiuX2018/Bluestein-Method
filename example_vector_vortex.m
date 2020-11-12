@@ -1,8 +1,9 @@
 %Calculation of the optical fields using Debye theory.
 %unit: um
 
-clc
-clear all
+clc; clear;
+close all;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 M = 201;
 global lamda k n1 NA fo
