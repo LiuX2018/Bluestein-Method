@@ -34,16 +34,16 @@ E(thh>asin(NA./n1))=0;
 figure
 imshow(angle(E),[]); 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-my=101;
-mx=101;
+my=5000;
+mx=5000;
 % startx = -0.8e0; 
 % endx = 0.8e0;  
 % starty = -0.8e0; 
 % endy = 0.8e0;
-startx = -5e0; 
-endx = 5e0;  
-starty = -5e0; 
-endy = 5e0;
+startx = -2e0; 
+endx = 2e0;  
+starty = -2e0; 
+endy = 2e0;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [Ex Ey Ez] = Vector_Bluestein(E,M,polar,startx,endx,starty,endy,z,mx,my); 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,6 +54,7 @@ Phasex=angle(Ex);
 Phasey=angle(Ey);
 Phasez=angle(Ez);
 I = Ix+Iy+Iz;
+figure;imagesc(I);axis image xy off;
 Imax=max(max(I));
 I=I./Imax;
 Ix=Ix./Imax;
